@@ -1,38 +1,34 @@
 import React, {useState, useEffect} from 'react'
-import Card from '../Card/Card'
 import { getSalsas } from '../../mockAPI/mockAPI'
 import './ItemListContainer.css'
+import ItemList from '../ItemList/ItemList';
+import { useParams } from 'react-router-dom';
+import { getCategorySalsa } from '../../mockAPI/mockAPI';
 
 function ItemListContainer(props) {
 
   const [listaPicantes, setlistaPicantes] = useState([]);
 
+  const {categoryId} = useParams()
+  console.log(categoryId)
   useEffect(
     () => {
-      getSalsas().then((respuesta) => {
+      if(categoryId){
+        getCategorySalsa(categoryId).then((respuesta) => setlistaPicantes(respuesta))
+      }
+      else{
+        getSalsas().then((respuesta) => {
           setlistaPicantes(respuesta);
         }
-      )},[]
+      )
+      }
+      },[categoryId]
     )
 
   return (
     <div className='contenedor-principal'>
         <h1>{props.greeting}</h1>
-        <div className='contenedor-productos'>
-          {listaPicantes.map((producto) => {
-            return(
-              <Card
-                key={producto.id}
-                nombre={producto.nombre} 
-                precio={producto.precio} 
-                img={producto.img}
-                origen={producto.origen}
-                categoria={producto.categoria}
-                stock={producto.stock}
-              />
-              )
-          })}
-        </div>
+        <ItemList listaPicantes={listaPicantes}/>
     </div>
   )
 }

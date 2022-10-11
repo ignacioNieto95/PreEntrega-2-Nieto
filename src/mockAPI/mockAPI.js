@@ -15,90 +15,100 @@ const data = [
         nombre: 'Tabasco Original',
         img: tabascoOriginal,
         origen: 'origen',
-        categoria: 'categoria',
+        categoria: 'Tabasco',
         precio: 10,
         stock: 12,
+        descripcion: 'La salsa Tabasco es una famosa salsa picante de origen estadounidense, creada en 1868 por Edmund McIlhenny. De sabor picante, se prepara con chile tabasco rojo, vinagre, agua y sal, macerados en barriles de roble. Aunque su nombre procede del estado mexicano de Tabasco, se trata de un producto estadounidense elaborado por la McIlhenny Company, que produce toda la salsa vendida en el mundo1​ en su sede situada en el domo salino de Avery Island en la parroquia de Iberia en la zona meridional del estado de Luisiana, en el sur de los Estados Unidos.'
     },
     {
         id: 2,
         nombre: 'Tabasco Jalapeño',
         img: tabascoJalapeños,
         origen: 'origen',
-        categoria: 'categoria',
+        categoria: 'Tabasco',
         precio: 10,
         stock: 10,
+        descripcion: 'La salsa Tabasco es una famosa salsa picante de origen estadounidense, creada en 1868 por Edmund McIlhenny. De sabor picante, se prepara con chile tabasco rojo, vinagre, agua y sal, macerados en barriles de roble. Aunque su nombre procede del estado mexicano de Tabasco, se trata de un producto estadounidense elaborado por la McIlhenny Company, que produce toda la salsa vendida en el mundo1​ en su sede situada en el domo salino de Avery Island en la parroquia de Iberia en la zona meridional del estado de Luisiana, en el sur de los Estados Unidos.'
     },
     {
         id: 3,
         nombre: 'Tabasco Chipotle',
         img: tabascoChipotle,
         origen: 'origen',
-        categoria: 'categoria',
+        categoria: 'Tabasco',
         precio: 10,
         stock: 10,
+        descripcion: 'La salsa Tabasco es una famosa salsa picante de origen estadounidense, creada en 1868 por Edmund McIlhenny. De sabor picante, se prepara con chile tabasco rojo, vinagre, agua y sal, macerados en barriles de roble. Aunque su nombre procede del estado mexicano de Tabasco, se trata de un producto estadounidense elaborado por la McIlhenny Company, que produce toda la salsa vendida en el mundo1​ en su sede situada en el domo salino de Avery Island en la parroquia de Iberia en la zona meridional del estado de Luisiana, en el sur de los Estados Unidos.'
     },
     {
         id: 4,
         nombre: 'Tabasco Sriracha',
         img: tabascoSriracha,
         origen: 'origen',
-        categoria: 'categoria',
+        categoria: 'Tabasco',
         precio: 10,
         stock: 10,
+        descripcion: 'La salsa Tabasco es una famosa salsa picante de origen estadounidense, creada en 1868 por Edmund McIlhenny. De sabor picante, se prepara con chile tabasco rojo, vinagre, agua y sal, macerados en barriles de roble. Aunque su nombre procede del estado mexicano de Tabasco, se trata de un producto estadounidense elaborado por la McIlhenny Company, que produce toda la salsa vendida en el mundo1​ en su sede situada en el domo salino de Avery Island en la parroquia de Iberia en la zona meridional del estado de Luisiana, en el sur de los Estados Unidos.'
     },
     {
         id: 5,
         nombre: 'El Yucateco Original',
         img: yucatecoOriginal,
         origen: 'origen',
-        categoria: 'categoria',
+        categoria: 'Yucateco',
         precio: 10,
         stock: 10,
+        descripcion: 'La salsa Tabasco es una famosa salsa picante de origen estadounidense, creada en 1868 por Edmund McIlhenny. De sabor picante, se prepara con chile tabasco rojo, vinagre, agua y sal, macerados en barriles de roble. Aunque su nombre procede del estado mexicano de Tabasco, se trata de un producto estadounidense elaborado por la McIlhenny Company, que produce toda la salsa vendida en el mundo1​ en su sede situada en el domo salino de Avery Island en la parroquia de Iberia en la zona meridional del estado de Luisiana, en el sur de los Estados Unidos.'
     },
     {
         id: 6,
         nombre: 'El Yucatejo Verde',
         img: yucatecoVerde,
         origen: 'origen',
-        categoria: 'categoria',
+        categoria: 'Yucateco',
         precio: 10,
         stock: 10,
+        descripcion: 'La salsa Tabasco es una famosa salsa picante de origen estadounidense, creada en 1868 por Edmund McIlhenny. De sabor picante, se prepara con chile tabasco rojo, vinagre, agua y sal, macerados en barriles de roble. Aunque su nombre procede del estado mexicano de Tabasco, se trata de un producto estadounidense elaborado por la McIlhenny Company, que produce toda la salsa vendida en el mundo1​ en su sede situada en el domo salino de Avery Island en la parroquia de Iberia en la zona meridional del estado de Luisiana, en el sur de los Estados Unidos.'
     },
     {
         id: 7,
         nombre: 'El Yucatejo Extrapicante',
         img: yucatecoExtrapicante,
         origen: 'origen',
-        categoria: 'categoria',
+        categoria: 'Yucateco',
         precio: 10,
         stock: 10,
+        descripcion: 'La salsa Tabasco es una famosa salsa picante de origen estadounidense, creada en 1868 por Edmund McIlhenny. De sabor picante, se prepara con chile tabasco rojo, vinagre, agua y sal, macerados en barriles de roble. Aunque su nombre procede del estado mexicano de Tabasco, se trata de un producto estadounidense elaborado por la McIlhenny Company, que produce toda la salsa vendida en el mundo1​ en su sede situada en el domo salino de Avery Island en la parroquia de Iberia en la zona meridional del estado de Luisiana, en el sur de los Estados Unidos.'
     },
     {
         id: 8,
         nombre: 'El Yucatejo Negro',
         img: yucatecoNegro,
         origen: 'origen',
-        categoria: 'categoria',
+        categoria: 'Yucateco',
         precio: 10,
         stock: 10,
+        descripcion: 'La salsa Tabasco es una famosa salsa picante de origen estadounidense, creada en 1868 por Edmund McIlhenny. De sabor picante, se prepara con chile tabasco rojo, vinagre, agua y sal, macerados en barriles de roble. Aunque su nombre procede del estado mexicano de Tabasco, se trata de un producto estadounidense elaborado por la McIlhenny Company, que produce toda la salsa vendida en el mundo1​ en su sede situada en el domo salino de Avery Island en la parroquia de Iberia en la zona meridional del estado de Luisiana, en el sur de los Estados Unidos.'
     },
     {
         id: 9,
         nombre: 'VooDoo Reaper',
         img: voodooReaper,
         origen: 'origen',
-        categoria: 'categoria',
+        categoria: 'Especiales',
         precio: 10,
         stock: 10,
+        descripcion: 'La salsa Tabasco es una famosa salsa picante de origen estadounidense, creada en 1868 por Edmund McIlhenny. De sabor picante, se prepara con chile tabasco rojo, vinagre, agua y sal, macerados en barriles de roble. Aunque su nombre procede del estado mexicano de Tabasco, se trata de un producto estadounidense elaborado por la McIlhenny Company, que produce toda la salsa vendida en el mundo1​ en su sede situada en el domo salino de Avery Island en la parroquia de Iberia en la zona meridional del estado de Luisiana, en el sur de los Estados Unidos.'
     },
     {
         id: 10,
         nombre: 'Cholula Original',
         img: cholula,
         origen: 'origen',
-        categoria: 'categoria',
+        categoria: 'Especiales',
         precio: 10,
         stock: 10,
+        descripcion: 'La salsa Tabasco es una famosa salsa picante de origen estadounidense, creada en 1868 por Edmund McIlhenny. De sabor picante, se prepara con chile tabasco rojo, vinagre, agua y sal, macerados en barriles de roble. Aunque su nombre procede del estado mexicano de Tabasco, se trata de un producto estadounidense elaborado por la McIlhenny Company, que produce toda la salsa vendida en el mundo1​ en su sede situada en el domo salino de Avery Island en la parroquia de Iberia en la zona meridional del estado de Luisiana, en el sur de los Estados Unidos.'
     },
 ];
 
@@ -111,11 +121,20 @@ export function getSalsas() {
         }) 
 };
 
-export function getUnaSalsa() {
+export function getUnaSalsa(id) {
     return new Promise(
         (resolve) => {
             setTimeout(
-              () =>  resolve(data[0]), 1000
+              () =>  resolve(data.find((item) => item.id === Number(id))), 1000
+            );
+        }) 
+};
+
+export function getCategorySalsa(id) {
+    return new Promise(
+        (resolve) => {
+            setTimeout(
+              () =>  resolve(data.filter((item) => item.categoria === id)), 1000
             );
         }) 
 };

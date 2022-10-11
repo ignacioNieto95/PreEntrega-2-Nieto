@@ -16,7 +16,7 @@ function ItemCount(props) {
     }
 
   return (
-    <div>
+    <div className='contador-cantidad'>
         <button>Comprar</button>
         <div className='sumar-restar'>
             <button onClick={handleRestar}>-</button>
