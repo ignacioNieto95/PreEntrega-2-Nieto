@@ -27,5 +27,18 @@
 
 p{
     text-align:justify;
-   
+    color: black;
+}
+
+.eliminar-item{
+    margin: 10px;
+}
+
+.loader{
+    height: 400px;
+    width: 400px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

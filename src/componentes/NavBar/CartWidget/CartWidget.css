@@ -1,0 +1,10 @@
+.contador{
+   color: white;
+   margin: 5px;
+}
+
+.cart-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

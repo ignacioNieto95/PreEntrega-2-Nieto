@@ -4,6 +4,7 @@ import './ItemListContainer.css'
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 import { getCategorySalsa } from '../../mockAPI/mockAPI';
+import Loader from '../Loader/Loader';
 
 function ItemListContainer(props) {
 
@@ -13,6 +14,7 @@ function ItemListContainer(props) {
   console.log(categoryId)
   useEffect(
     () => {
+      setlistaPicantes([])
       if(categoryId){
         getCategorySalsa(categoryId).then((respuesta) => setlistaPicantes(respuesta))
       }
@@ -28,9 +30,16 @@ function ItemListContainer(props) {
   return (
     <div className='contenedor-principal'>
         <h1>{props.greeting}</h1>
-        <ItemList listaPicantes={listaPicantes}/>
+        {listaPicantes.length ?
+          <ItemList listaPicantes={listaPicantes}/>
+          :
+          <Loader/>
+        }
+        
     </div>
   )
+  
+
 }
 
 export default ItemListContainer

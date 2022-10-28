@@ -1,6 +1,5 @@
 import React from 'react'
 import './Card.css'
-import ItemCount from '../ItemCount/ItemCount'
 import {Link} from 'react-router-dom'
 
 function Card(props) {

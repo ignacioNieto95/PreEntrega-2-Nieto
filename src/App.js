@@ -3,17 +3,23 @@ import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailCon
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer.js';
 import NavBar from './componentes/NavBar/NavBar.js';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {CartContextProvider} from './context/cartContext';
+import CartView from './componentes/CartView/CartView';
+
 
 function App() {
   return (
-    <BrowserRouter>
-          <NavBar/>
-          <Routes>
-            <Route path='/' element={<ItemListContainer greeting="Bienvenidos a nuestra tienda online"/>}/>
-            <Route path='/category/:categoryId' element={<ItemListContainer greeting="Bienvenidos a nuestra tienda online"/>}/>
-            <Route path='/item/:id' element={<ItemDetailContainer/>}/>
-          </Routes>
-    </BrowserRouter>
+    <CartContextProvider>
+      <BrowserRouter>
+            <NavBar/>
+            <Routes>
+              <Route path='/' element={<ItemListContainer greeting="Bienvenidos a nuestra tienda online"/>}/>
+              <Route path='/category/:categoryId' element={<ItemListContainer greeting="Bienvenidos a nuestra tienda online"/>}/>
+              <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+              <Route path='/cart' element={<CartView/>}/>
+            </Routes>
+      </BrowserRouter>
+    </CartContextProvider>
   );
 }
 

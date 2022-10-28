@@ -8,6 +8,8 @@ function ItemDetailContainer(props) {
 
   const [salsa, setSalsa] = useState({});
 
+  const [msgError, setmsgError] = useState(null)
+
   const {id} = useParams()
 
   useEffect(
@@ -15,13 +17,20 @@ function ItemDetailContainer(props) {
       getUnaSalsa(id).then((respuesta) => {
           setSalsa(respuesta);
         }
-      )},[id]
+      ).catch((error) => {
+        setmsgError(error.message)
+      })},[id]
     )
 
+    
   return (
         <div className='contenedor-detalle'>
           <div className='detalle'>
-            <ItemDetail 
+            {msgError !== null ? 
+              <h3>Error: {msgError}</h3> 
+              :
+              <ItemDetail 
+              id={salsa.id}
               nombre={salsa.nombre}
               precio={salsa.precio} 
               img={salsa.img}
@@ -29,7 +38,7 @@ function ItemDetailContainer(props) {
               categoria={salsa.categoria}
               stock={salsa.stock}
               descripcion={salsa.descripcion}
-            />
+            />} 
           </div>
         </div>
   )

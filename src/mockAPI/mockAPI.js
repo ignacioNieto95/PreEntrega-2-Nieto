@@ -123,9 +123,15 @@ export function getSalsas() {
 
 export function getUnaSalsa(id) {
     return new Promise(
-        (resolve) => {
+        (resolve, reject) => {
             setTimeout(
-              () =>  resolve(data.find((item) => item.id === Number(id))), 1000
+              () =>  {
+                if(data.find((item) => item.id === Number(id)) === undefined)
+                    reject(new Error("No se encuentra la salsa que estas buscando"))
+                else{
+                    resolve(data.find((item) => item.id === Number(id)))
+                }
+              }, 1000
             );
         }) 
 };

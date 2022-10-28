@@ -15,9 +15,10 @@ function ItemCount(props) {
             setCantidad(cantidad + 1);
     }
 
+
   return (
     <div className='contador-cantidad'>
-        <button>Comprar</button>
+        <button onClick={() => {props.onAddToCart(cantidad)}}>Agregar al carrito</button>
         <div className='sumar-restar'>
             <button onClick={handleRestar}>-</button>
             <strong className='cantidad'>{cantidad}</strong>
