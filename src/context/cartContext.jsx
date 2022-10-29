@@ -43,9 +43,19 @@ function CartContextProvider(props){
     function getTotalPrice(){
         let precioTotal = 0
         cart.forEach(item => {
-            precioTotal = precioTotal + item.newItem.precio
+            precioTotal = precioTotal + (item.newItem.precio * item.newItem.cantidad)
         })
         return precioTotal
+    }
+
+    function isInCart(producto){
+
+        const estaEnCarrito = cart.some((item) => {
+            return item.newItem.nombre === producto
+        })
+
+        return estaEnCarrito /*devuelve true si esta, false si no esta*/
+
     }
 
     return(
