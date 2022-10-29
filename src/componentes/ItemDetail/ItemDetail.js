@@ -28,7 +28,7 @@ function ItemDetail(props) {
               <p>Categoria: {props.categoria}</p>
             </div>
             <div className='descripcion-compra'>
-              <p>Descripcion: {props.descripcion}</p>
+              <p>{props.descripcion}</p>
               {cantidad === 0 ? <p>Sin items</p> : <p>Con {cantidad} items</p>}
               <ItemCount onAddToCart={onAddToCart} inicial={1} stock={props.stock}/>
               <button className='eliminar-item' onClick={() => removeItem(props.id)}>Eliminar</button>

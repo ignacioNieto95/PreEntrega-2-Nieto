@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {cartContext} from '../../context/cartContext';
 
 function CartView() {
-    const {cart, removeItem} = useContext(cartContext)
+    const {cart, removeItem, emptyCart, getTotalPrice} = useContext(cartContext)
     console.log(cart)
     return (
         <div>
@@ -12,7 +12,8 @@ function CartView() {
                 <button onClick={() => removeItem(item.newItem.id)}>X</button>
                 </>
             ))}
-            
+            <h4>{getTotalPrice()}</h4>
+            <button onClick={() => emptyCart()}>Vaciar Carrito</button>
         </div>
     )
 }
