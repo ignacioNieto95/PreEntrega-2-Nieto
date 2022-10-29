@@ -34,6 +34,8 @@ function CartContextProvider(props){
         return total
     }
 
+    
+
     return(
 
         <div>

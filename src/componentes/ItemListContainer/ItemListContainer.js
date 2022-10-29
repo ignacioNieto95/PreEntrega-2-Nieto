@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from 'react'
-import { getSalsas } from '../../mockAPI/mockAPI'
 import './ItemListContainer.css'
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
-import { getCategorySalsa } from '../../mockAPI/mockAPI';
 import Loader from '../Loader/Loader';
+import {getSalsas, getCategorySalsa} from '../../services/firebase';
 
 function ItemListContainer(props) {
 

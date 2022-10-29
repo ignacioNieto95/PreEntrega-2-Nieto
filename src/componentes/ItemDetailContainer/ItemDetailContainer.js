@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { getUnaSalsa } from '../../mockAPI/mockAPI'
+import { getUnaSalsa } from '../../services/firebase'
 import './ItemDetailContainer.css'
 import {useParams} from 'react-router-dom'
 import ItemDetail from '../ItemDetail/ItemDetail';
