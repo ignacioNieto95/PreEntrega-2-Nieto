@@ -45,4 +45,10 @@ export async function getCategorySalsa(id){
     return dataSalsas;
 }
 
+export function crearOrdenCompra(ordenCompra){
+
+    console.log("orden de compra: ", ordenCompra)
+
+}
+
 export default FirebaseApp;

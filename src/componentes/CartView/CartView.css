@@ -38,3 +38,14 @@
 .btn-vaciar{
     margin: 5px;
 }
+
+.btn-ver-productos{
+    color: black;
+}
+
+.finalizar{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    
+}
