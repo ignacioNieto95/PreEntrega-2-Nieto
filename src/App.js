@@ -5,6 +5,7 @@ import NavBar from './componentes/NavBar/NavBar.js';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {CartContextProvider} from './context/cartContext';
 import CartView from './componentes/CartView/CartView';
+import { mandarDataFirebase } from './services/firebase';
 
 
 function App() {
