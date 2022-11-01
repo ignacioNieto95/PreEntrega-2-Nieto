@@ -1,7 +1,7 @@
 import React, {useState, useContext} from 'react'
 import InputForm from './InputForm'
 import Swal from 'sweetalert2/dist/sweetalert2.js';
-import 'sweetalert2/src/sweetalert2.scss';
+/*mport 'sweetalert2/src/sweetalert2.scss';*/
 import { useNavigate } from 'react-router-dom';
 import { crearOrdenCompra } from '../../services/firebase';
 import { cartContext } from '../../context/cartContext';
