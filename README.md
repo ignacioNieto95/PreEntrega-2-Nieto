@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+Introduccion
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto comenzo con la idea de poder realizar un E-Commerce con el cual se pudieran comercializar distintos tipos de picantes y sus variedades. Comence usandolo como idea para practicar en el Curso de React de CoderHouse y al darle forma clase a clase, me decidi por perfeccionarlo a fondo para poder entregarlo como mi proyecto final para aprobar el curso en si.
 
-## Available Scripts
+Componentes y funcionalidades utilizadas.
 
-In the project directory, you can run:
+La aplicacion se fue desestructurando en distintos componentes, tratando de darle claridad a cada uno para poder codearlo de la manera mas practica y imple posible, asi si el dia de mañana alguien se interesa en leer y entender el desarrollo del proyecto, tiene una baja dificultad en comprenderlo.
 
-### `npm start`
+Cada producto se describe de la misma manera, tanto en el home como en las demas pantallas de "categorias", dentro de un componente <Card/> el cual recibe el producto por parametro como "props" y utiliza cada una de las llaves del componente(nombre, precio, cantidad) para poder describir brevemente el producto.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+En el componente <ItemList/> vamos a cargar todas las <Card/> que se generan realizando un .map al array de "listaPicantes". Luego dentro del componente <ItemListContainer/> funcionando como contenedor, llamamos a <ItemList/> para cargar el conjunto entero de productos y mostrarlos por pantalla.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Al hacer click en un producto, vamos a ser dirigidos al componente <ItemDetail/> el cual recibira el producto como "prop" y lo utilizara para realizar un renderizado del producto seleccionado en detalle, mostrando su descripcion completa y datos particulares. Dentro del <ItemDetail/> utilizamos otro componente denominado <ItemCount/> el cual se encarga de llevar la cuenta de la cantidad de productos seleccionados con una botonera que permite sumar o restar productos.
+Al igual que el <ItemList/>, el <ItemDetail/> esta tambien englobado en un contenedor al que denominamos <ItemDetailContainer/>.
 
-### `npm test`
+Dentro de la <NavBar/> vamos a tener el <CartWidget/> el cual nos permite ver el carrito de compras con los productos seleccionados. Para ver la pantalla del carrito renderizamos el componente <CartView/> donde mostramos pequeños contenedores en escala menor que en el home, con el fin de ver un detalle pequeño de los productos que estamos por comprar. Tambien aqui tendremos distintos botones para eliminar un producto o para vaciar el carrito y llamaremos tambien al componente <UserForm/> el cual nos pide que el usuario ingrese por teclado sus datos para poder generar la orden de compra con todos los datos del comprador.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para el momento de carga de los datos en los componentes trabajamos con un componente <Loader/> el cual es el mismo en todas las pantallas al momento de la carga.
 
-### `npm run build`
+En cuanto a las funcionalidades tenemos al <cartContext> en donde desarrollamos funciones que luego aplicamos en el sistema como addToCart(), getTotalItems(), removeItem(), emptyCart(), getTotalPrice(). Estas funciones son devueltas despues dentro de un provider al cual accedo desde los distintos componentes para los casos puntuales que necesite cada componente.
+Trabajamos en un principio con una MockApi, la cual usamos como base de datos en la que consultabamos y cargabamos nuestros productos, hasta que luego implementamos dentro de la carpeta "services" el servicio de Firebase con el archivo firebase.js utilizando el servicio firestore de Google.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Por ultimo, todos los componentes que llevan estilos tiene sus archivos ".css" correspondientes, ya que no trabajamos con los estilos en linea.

@@ -17,7 +17,7 @@ function CartView() {
 
     if(cart.length !== 0){
         return (
-            <>  
+            <div className='contenedor-principal'> 
                 <div className='contenedor-general'>
                     <h2>Productos en carrito</h2>
                     <div className='contenedor-productos-carrito'>
@@ -38,7 +38,7 @@ function CartView() {
                     <button className='btn-vaciar' onClick={() => emptyCart()}>Vaciar Carrito</button>
                 </div>
                 <UserForm cart={cart} getTotalPrice={getTotalPrice}/>
-            </>
+            </div>
         )
     }
     else{
